@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
 import './App.css';
-
+let emojes = document.querySelector(".choose-emoji")
+//https://66c06d30ba6f27ca9a569672.mockapi.io/emoji
 function App() {
+
+const  [emojiCard, setEmojiCard] = useState([]);
+console.log(emojiCard);
+
+useEffect(() => {
+   fetch("https://66c06d30ba6f27ca9a569672.mockapi.io/emoji")
+   .then(response => response.json())
+   .then(json => console.log(json));
+  },[]);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
     </div>
   );
 }
