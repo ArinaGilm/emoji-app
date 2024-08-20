@@ -1,6 +1,9 @@
-*{
+* {
   max-width: 1440px;
   margin: 0;
+}
+body {
+  background: #cff4fc;
 }
 .header {
   background: #087990;
@@ -8,25 +11,56 @@
 }
 .header-title {
   font-size: 72px;
-  color: #CFF4FC;
+  color: #cff4fc;
   text-align: center;
 }
 .header-about_emoji {
   font-size: 21px;
-  color: #CFF4FC;
+  color: #cff4fc;
   text-align: center;
 }
+
 .form {
   display: flex;
   justify-content: center;
-margin-top: -30px;
+  margin-top: -30px;
 }
 .found-emoji {
   height: 64px;
   width: 820px;
+  color: #cff4fc;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 100px;
+  gap: 20px;
+}
+/*
+.choose-emoji p {
+  border: solid 1px grey;
+  max-width: 316px;
+  height: auto;
+}
+*/
+.choose-emoji {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 30px;
+  height: 184px;
+  width: 316px;
+  background: white;
+  border: solid 1px gray;
+}
+.choose-emoji-descripchion {
+  color: black;
 }
 .footer {
-  height: 100vh;
 }
 
 .footer-made {
