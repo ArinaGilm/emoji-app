@@ -8,7 +8,8 @@ import Card from "./components/Card";
 function App() {
  
   const [emojiCard, setEmojiCard] = useState([]);
-  console.log(emojiCard);
+  const [searchEmogi, setSearchEmoji]= useState("");
+  console.log(searchEmogi);
   useEffect(() => {
     fetch("https://66c06d30ba6f27ca9a569672.mockapi.io/emoji")
       .then((response) => response.json())
@@ -27,18 +28,24 @@ function App() {
         <form className="form">
           <input
             className="found-emoji"
+            onChange={event => setSearchEmoji (event.target.value)}
             type="text"
             placeholder="Placeholder"
+            value={searchEmogi}
           />
         </form>
         <div className="container">
-          {emojiCard.map((elem) => (
-            <Card elem={elem}>
-             
-            let symbol = document.createElement("p");
-            symbol.innerHTML = emoji.symbol;
-            symbols.append(symbol);
-            </Card>
+          {emojiCard
+          .filter(elem=> {
+            if (elem.keywords.includes(searchEmogi)) {
+              return true;
+            }  else
+            return false;
+          })
+        
+          .map((elem, index) => (
+            <Card elem={elem} index={index}></Card>
+        
           ))}
         </div>
       </main>

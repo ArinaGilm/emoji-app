@@ -13,6 +13,7 @@ body {
   font-size: 72px;
   color: #cff4fc;
   text-align: center;
+  padding: 50px;
 }
 .header-about_emoji {
   font-size: 21px;
@@ -26,26 +27,22 @@ body {
   margin-top: -30px;
 }
 .found-emoji {
-  height: 64px;
-  width: 820px;
-  color: #cff4fc;
+ margin: 10px;
+ padding: 20px 300px;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
+  flex: 1 1 30%;
+  text-align: center;
   justify-content: space-between;
   align-items: center;
   margin: 30px 100px;
   gap: 20px;
+  
 }
-/*
-.choose-emoji p {
-  border: solid 1px grey;
-  max-width: 316px;
-  height: auto;
-}
-*/
+
 .choose-emoji {
   display: flex;
   flex-direction: column;
